@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'new' => 'users#new'
+	resources :users
 	# for root path
 	root'static_pages#home'
 	# code for static page route as shortname

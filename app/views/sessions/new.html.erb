@@ -1,0 +1,16 @@
+<%= provide(:title,"Log in") %>
+<div class="row">
+	<%= form_for :session, url: sessions_create_path do |session| %>
+	<%= session.label :email %>
+	<%= session.text_field :email %>
+
+	<%= session.label :password %>
+	<%= session.password_field :password %>
+
+	<div style="float:left; display:flex; "> <%= session.check_box :remember_me %><span>remember me</span></div>
+
+
+	<%= session.submit "Log in" %>
+</div>
+<p style="text-align: center">New user? <%= link_to "Sign up now!", new_user_path %></p>
+<% end %>

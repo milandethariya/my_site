@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+  post 'sessions/create'
+  delete'sessions/destroy'
 	resources :users
 	# for root path
 	root'static_pages#home'

@@ -9,11 +9,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'true' %>
   </head>
 
-  <body>
-    <% flash.each do |key, value| %>
-    <%= "#{key}: #{value}." %>
-    <% end %> 
+  <body> 
     <%= render 'layouts/header' %>
+    <% flash.each do |key, value| %>
+      <%= "#{key}: #{value}." %>
+    <% end %>
     <%= yield %>
     <%= render 'layouts/footer' %>
     <!--data will give by this code at development environment -->

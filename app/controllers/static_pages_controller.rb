@@ -11,4 +11,10 @@ class StaticPagesController < ApplicationController
   def contact
   end
 
+  def activate
+	end
+
+	def reset
+	end
+
 end

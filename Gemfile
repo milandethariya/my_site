@@ -27,6 +27,7 @@ gem 'bootstrap-sass','~>3.2.0.0'
 
 gem 'bcrypt', '~>3.1.7'
 
+gem "letter_opener", :group => :development
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password

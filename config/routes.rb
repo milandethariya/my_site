@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  resources :password_resets, only: [:new, :create, :edit, :update]
+  resources :account_activations, only: [:edit]
   get 'sessions/new'
   post 'sessions/create'
   delete'sessions/destroy'
@@ -6,6 +9,7 @@ Rails.application.routes.draw do
 	# for root path
 	root'static_pages#home'
 	# code for static page route as shortname
+  get 'active' => 'static_pages#active'
   get 'home' => 'static_pages#home'
   get 'help' => 'static_pages#help'
   get 'about' => 'static_pages#about'

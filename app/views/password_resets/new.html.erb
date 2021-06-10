@@ -1,0 +1,10 @@
+<%= provide(:title,"reset_password") %>
+<h1>forget password </h1>
+<div class="row">
+	<%= form_for :reset_password, url: password_resets_path do |reset| %>
+		<%= reset.label :email %>
+		<%= reset.email_field :email %>
+
+		<%= reset.submit "submit"%>
+	<% end %>
+</div>

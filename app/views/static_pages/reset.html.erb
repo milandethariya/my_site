@@ -1,0 +1,11 @@
+<%= provide(:title,"reset_password") %>
+<h1>Sample App</h1>
+
+<p>Hi <%= @user.name %>,</p>
+
+<p>
+Welcome to the Sample App! Click on the link below to reset password:
+</p>
+
+<%= link_to "reset_password", edit_password_reset_url(@user.reset_token,
+                                                    email: @user.email) %>
